@@ -1,0 +1,333 @@
+html {
+  margin: 0 auto;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, body {
+margin: 0;
+padding: 0;
+}
+
+button, select {
+  text-transform: none;
+  border: none;
+}
+
+input {
+    line-height: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+a, a:active, a:hover {
+  outline: 0;
+  text-decoration: none;
+  color: gray;
+}
+
+
+body {
+  background-image: url(public/bg.png);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'SF Pro Text', sans-serif;
+}
+
+.bars {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 41px;
+  grid-template-rows: 1fr;
+  gap: 4px;
+  grid-template-areas: 'time signals battery';
+}
+
+.bars__time {
+  padding-left: 36px;
+  grid-area: time;
+  display: flex;
+  align-items: center;
+}
+
+.bars__time-item {
+  color: white;
+  font-size: 15px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.bars__signals-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 5px;
+  grid-area: signals;
+  display: flex;
+  align-items: center;
+}
+
+.bars__battery {
+  grid-area: battery;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.advertisement {
+  position: absolute;
+  top: 67px;
+  width: 342px;
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisement__title {
+  margin-top: 145px;
+}
+
+.advertisement__title-content {
+  font-size: 42px;
+  color: white;
+  text-align: center;
+}
+
+.advertisement__cards {
+  margin: 47px auto 49px;
+  height: 138.6px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  font-size: 11px;
+}
+
+.advertisement__cards-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+}
+
+.advertisement__cards-art-creation {
+  background-image: url("./public/Bitmap.png");
+}
+
+.advertisement__cards-exclusive-styles {
+  background-image: url("./public/f2.png");
+}
+
+.advertisement__cards-magic-avatars {
+  background-image: url("./public/f3.png");
+}
+
+.advertisement__cards-title {
+  padding-left: 8px;
+  padding-bottom: 14px;
+}
+
+.advertisement__selectors-wrap {
+  display: grid;
+  grid-template-rows: 56px 56px 56px;
+  row-gap: 8px;
+}
+
+.advertisement__selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 13.5px;
+}
+
+.advertisement__selector, .advertisement__button-name {
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 28px;
+  box-sizing: border-box;
+  padding: 8px 0;
+}
+
+.advertisement__button-name {
+  height: 100%;
+  font-size: 20px;
+}
+
+.advertisement__left-title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.advertisement__right-info, .advertisement__left-info {
+  color: gray;
+  font-weight: normal;
+}
+
+.advertisement__left, .advertisement__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.advertisement__left {
+  padding-left: 24px;
+}
+
+.advertisement__right {
+  padding-left: 45px;
+}
+
+.advertisement__yearly-right {
+  position: relative;
+}
+
+.advertisement__yearly-right::before {
+  position: absolute;
+  top: -20px;
+  left: 28px;
+  content: 'BEST OFFER';
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1px 21.5px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__wrapper {
+  width: 100%;
+  margin: 752px auto 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 13.5px;
+  font-family: 'SF Pro Display', sans-serif;
+  color: gray;
+}
+
+.footer__home-indicator {
+  width: 134px;
+  height: 5px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 2.5px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 428px) {
+  body {
+    background-size: 428px;
+  }
+}
+
+@media (max-width: 431px) {
+  body {
+    background-size: 430px;
+  }
+}
+
+@media (max-width: 415px) and (min-width: 414px) {
+
+  body {
+    background-size: 414px;
+  }
+
+  .bars {
+  grid-template-columns: 1fr 1fr 66px;
+  gap: 4px;
+  grid-template-areas: 'signals time bluetooth battery';
+  }
+
+  .bars__signals-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 6px;
+  }
+
+  .bars__mobile-signal::after {
+    content: 'Sketch';
+    color: white;
+    font-size: 12px;
+  }
+
+  .bars__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bars__time-item {
+    font-size: 12px;
+  }
+
+  .bars__time::after {
+    content: 'AM';
+    color: white;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  .bars__battery {
+    padding-right: 5px;
+  }
+
+  .bars__bluetooth::before {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    content: url(./public/Bluetooth.png);
+    grid-area: bluetooth;
+  }
+
+  .bars__battery::before {
+    content: '100%';
+    color: white;
+    font-size: 12px;
+    padding-right: 3px;
+  }
+
+  .advertisement {
+    top: 32px;
+    width: 342px;
+    }
+
+  .advertisement__title {
+    margin-top: 69px;
+  }
+
+  .advertisement__cards {
+    margin: 40px auto 40.4px;
+  }
+
+}

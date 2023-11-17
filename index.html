@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="bars">
+          <div class="bars__time">
+            <h3 class="bars__time-item">9:41</h3>
+          </div>
+          <div class="bars__signals-side">
+            <div class="bars__mobile-signal">
+            <img src="public/Mobile Signal.png" alt="">
+            </div>
+          <div class="bars__wifi">
+            <img src="public/Wifi.png" alt="">
+          </div>
+        </div>
+        <div class="bars__bluetooth">
+        </div>
+          <div class="bars__battery">
+            <img src="public/Battery.png" alt="">
+          </div>
+        </div>
+        
+      </header>
+      <main class="advertisement">
+        <div class="advertisement__close"><a href="#"><img src="public/Cross.png" alt=""></a></div>
+        <div class="advertisement__title">
+          <h1 class="advertisement__title-content i18n" data-i18n="GetUnlimitedAccess">Get Unlimited Access</h1>
+        </div>
+        <section class="advertisement__cards">
+          <div class="advertisement__cards-art-creation advertisement__cards-item"><h3 class="advertisement__cards-title i18n">Unlimited Art Creation</h3></div>
+          <div class="advertisement__cards-exclusive-styles advertisement__cards-item"><h3 class="advertisement__cards-title i18n">Exclusive Styles</h3></div>
+          <div class="advertisement__cards-magic-avatars advertisement__cards-item"><h3 class="advertisement__cards-title i18n">Magic Avatars With 20% Off</h3></div>
+        </section>
+        <section class="advertisement__selectors-wrap">
+          <div class="advertisement__selector-yearly advertisement__selector">
+            <div class="advertisement__yearly-left advertisement__left">
+              <h3 class="advertisement__left-title i18n">EARLY ACCESS</h3>
+              <p class="advertisement__left-info i18n">Just $39.99 per year</p>
+            </div>
+            <div class="advertisement__yearly-right advertisement__right">
+              <p class="advertisement__right-info">$0.48</p>
+              <p class="advertisement__right-info i18n">per week</p>
+            </div>
+          </div>
+          <div class="advertisement__selector-weekly advertisement__selector">
+            <div class="advertisement__weekly-left advertisement__left">
+              <h3 class="advertisement__left-title i18n">WEEKLY ACCESS</h3>
+            </div>
+            <div class="advertisement__weekly-right advertisement__right">
+              <p class="advertisement__right-info">$6.99</p>
+              <p class="advertisement__right-info i18n">per week</p>
+            </div>
+          </div>
+          <div class="advertisement__button"><button class="advertisement__button-name i18n">Continue</button></div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+        <p class="footer__link-terms"><a href="#" class="footer__link-terms-item i18n">Terms of Use</a></p>
+        <p class="footer__link-policy"><a href="#" class="footer__link-policy-item i18n">Privacy Policy</a></p>
+        <p class="footer__link-restore"><a href="#" class="footer__link-restore-item i18n">Restore</a></p>
+        </div>
+        <div class="footer__home-indicator"></div>
+      </footer>
+    </div>
+  </body>
+  <script type="module" src="./main.js"></script>
+</html>
