@@ -1,19 +1,18 @@
 import './i18n/i18n';
 import i18next from 'i18next';
 
-const headersContent = ['UnlimitedArtCreation', 'ExclusiveStyles', 'MagicAvatarsWith20%Off', 'EARLYACCESS', 'WEEKLYACCESS'];
-const commentsContent = ['Just$39.99peryear', 'perweek'];
+const headersContent = ['UnlimitedArtCreation', 'ExclusiveStyles', 'MagicAvatarsWith20%Off', 'YEARLYACCESS', 'WEEKLYACCESS'];
+const commentsContent = ['Just$39.99peryear', 'perweek', 'perweek'];
 const linksContent = ['TermsofUse', 'PrivacyPolicy', 'Restore'];
 const buttonContinue = ['Continue'];
 const bestOffer = ['BESTOFFER'];
-// const den = document.getElementsByTagName('::before');
-// console.log(den)
 
 createPushTitle();
 pushHeaders(createTagElement(headersContent, 'h3'), 3);
 pushComments(createTagElement(commentsContent, 'p'), 1);
-pushLinks(createTagElement(linksContent, 'a'));
+pushLinks(createTagElement(linksContent, 'p'));
 pushContinue(createTagElement(buttonContinue, 'button'))
+pushBestOffer(createTagElement(bestOffer, 'p'))
 
 
 function createPushTitle(){
@@ -50,7 +49,7 @@ function pushComments(arr, num) {
 function pushLinks(arr) {
   const linksContainer = document.getElementsByClassName('footer__link');
   arr.map((a, index) => { 
-    a.href = '#'; a.className = "footer__link-item i18n"; linksContainer[index].append(a);
+    a.className = "footer__link-item i18n"; linksContainer[index].append(a);
 })
 }
 
@@ -59,6 +58,16 @@ function pushContinue(arr) {
   arr[0].className = "advertisement__button-name i18n"; continueContainer[0].append(arr[0]);
 }
 
+function pushBestOffer(arr) {
+  const bestOfferContainer = document.getElementsByClassName('advertisement__selectors-wrap');
+  arr[0].className = "advertisement__bestOffer i18n"; bestOfferContainer[0].prepend(arr[0]);
+}
+// changeLanguage();
+function changeLanguage() {
+  const advSelector = document.getElementsByClassName('advertisement__selector');
+  for (let i of [...advSelector]) {i.style.fontSize = '14px'; console.log(i.style)}
+  document.getElementsByClassName('advertisement__title-content')[0].style.fontSize = '34px';
+}
 
 // document.querySelector('#app').innerHTML = `
 //   <div>

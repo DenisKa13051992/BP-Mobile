@@ -91,15 +91,18 @@ header {
 }
 
 .advertisement {
-  position: absolute;
-  top: 67px;
+  position: relative;
+  top: 24px;
   width: 342px;
   display: flex;
   flex-direction: column;
 }
 
 .advertisement__title {
-  margin-top: 145px;
+  height: 248px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .advertisement__title-content {
@@ -109,7 +112,7 @@ header {
 }
 
 .advertisement__cards {
-  margin: 47px auto 49px;
+  margin: 35px auto 51px;
   height: 138.6px;
   display: grid;
   grid-template-rows: 1fr;
@@ -138,21 +141,21 @@ header {
 }
 
 .advertisement__cards-title {
-  padding-left: 8px;
-  padding-bottom: 14px;
+  padding: 0 7px 7px 7px;
 }
 
 .advertisement__selectors-wrap {
   display: grid;
-  grid-template-rows: 56px 56px 56px;
+  grid-template-rows: 56px 56px 63px;
   row-gap: 8px;
+  position: relative;
 }
 
 .advertisement__selector {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 212px 130px;
   font-family: 'SF Pro Display', sans-serif;
-  font-size: 13.5px;
+  font-size: 16px;
 }
 
 .advertisement__selector, .advertisement__button-name {
@@ -160,12 +163,16 @@ header {
   width: 100%;
   border-radius: 28px;
   box-sizing: border-box;
-  padding: 8px 0;
+  padding: 4px 0;
 }
 
 .advertisement__button-name {
   height: 100%;
   font-size: 20px;
+}
+
+.advertisement__button {
+  margin-top: 8px;
 }
 
 .advertisement__left-title {
@@ -190,22 +197,32 @@ header {
 }
 
 .advertisement__right {
-  padding-left: 45px;
+  padding-left: 3px;
+  padding-top: 5px;
 }
 
 .advertisement__yearly-right {
   position: relative;
 }
+.advertisement__weekly-right {
+  padding-top: 2px;
+}
 
-.advertisement__yearly-right::before {
+.advertisement__bestOffer {
   position: absolute;
-  top: -20px;
-  left: 28px;
-  content: 'BEST OFFER';
+  top: -10px;
+  right: 25px;
   background-color: white;
   border: 1px solid white;
   border-radius: 10px;
-  padding: 1px 21.5px;
+  font-size: 13px;
+  font-family: "Roboto";
+  font-weight: 700;
+  min-width: 116px;
+  height: 18px;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 2px;
 }
 
 .footer {
@@ -217,13 +234,13 @@ header {
 }
 
 .footer__wrapper {
-  width: 100%;
-  margin: 752px auto 18px;
+  width: 342px;
+  margin: 68px auto 18px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-family: 'SF Pro Display', sans-serif;
   color: gray;
 }
@@ -236,6 +253,11 @@ header {
   border-radius: 2.5px;
   box-sizing: border-box;
   margin-bottom: 8px;
+}
+
+.footer__link-item {
+  display: flex;
+  text-align: center;
 }
 
 @media (max-width: 375px) {

@@ -1,7 +1,7 @@
 import i18next from 'i18next';
 
 i18next.init({
-  lng: 'ru', // if you're using a language detector, do not define the lng option
+  lng: 'en', // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {
@@ -10,7 +10,7 @@ i18next.init({
         "UnlimitedArtCreation": "Unlimited Art Creation",
         "ExclusiveStyles": "Exclusive Styles",
         "MagicAvatarsWith20%Off": "Magic Avatars With 20% Off",
-        "EARLYACCESS": "EARLY ACCESS",
+        "YEARLYACCESS": "YEARLY ACCESS",
         "Just$39.99peryear": "Just $39.99 per year",
         "perweek": "per week",
         "WEEKLYACCESS": "WEEKLY ACCESS",
@@ -28,7 +28,7 @@ i18next.init({
         "UnlimitedArtCreation": "Безграничное творчество",
         "ExclusiveStyles": "Эксклюзивные стили",
         "MagicAvatarsWith20%Off": "Волшебные аватары со скидкой 20%",
-        "EARLYACCESS": "ГОДОВОЙ ДОСТУП",
+        "YEARLYACCESS": "ГОДОВОЙ ДОСТУП",
         "Just$39.99peryear": "Всего $39,99 в год",
         "perweek": "в неделю",
         "WEEKLYACCESS": "НЕДЕЛЬНЫЙ ДОСТУП",
@@ -46,7 +46,7 @@ i18next.init({
         "UnlimitedArtCreation": "Creación de arte ilimitada",
         "ExclusiveStyles": "Estilos exclusivos",
         "MagicAvatarsWith20%Off": "Avatares Mágicos con 20% de Descuento",
-        "EARLYACCESS": "ACCESO TEMPRANO",
+        "YEARLYACCESS": "ACCESO TEMPRANO",
         "Just$39.99peryear": "Sólo 39,99 dólares al año",
         "perweek": "por semana",
         "WEEKLYACCESS": "ACCESO SEMANAL",
