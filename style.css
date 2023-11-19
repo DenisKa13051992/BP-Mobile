@@ -35,6 +35,7 @@ a, a:active, a:hover {
 body {
   background-image: url(public/bg.png);
   box-sizing: border-box;
+  background-size: cover;
 }
 
 .wrapper {
