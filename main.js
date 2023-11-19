@@ -7,12 +7,19 @@ const linksContent = ['TermsofUse', 'PrivacyPolicy', 'Restore'];
 const buttonContinue = ['Continue'];
 const bestOffer = ['BESTOFFER'];
 
+checkUrl()
+function checkUrl() {
+  const path = location.pathname;
+  path === '/ru' ? i18next.changeLanguage('ru') : path === '/spa' ? i18next.changeLanguage('spa') : i18next.changeLanguage('en')
+}
+
 createPushTitle();
 pushHeaders(createTagElement(headersContent, 'h3'), 3);
 pushComments(createTagElement(commentsContent, 'p'), 1);
 pushLinks(createTagElement(linksContent, 'p'));
 pushContinue(createTagElement(buttonContinue, 'button'))
 pushBestOffer(createTagElement(bestOffer, 'p'))
+if (location.pathname === '/ru') {changeToRussianLanguage()}
 
 
 function createPushTitle(){
@@ -62,30 +69,10 @@ function pushBestOffer(arr) {
   const bestOfferContainer = document.getElementsByClassName('advertisement__selectors-wrap');
   arr[0].className = "advertisement__bestOffer i18n"; bestOfferContainer[0].prepend(arr[0]);
 }
-// changeLanguage();
-function changeLanguage() {
+
+function changeToRussianLanguage() {
   const advSelector = document.getElementsByClassName('advertisement__selector');
   for (let i of [...advSelector]) {i.style.fontSize = '14px'; console.log(i.style)}
   document.getElementsByClassName('advertisement__title-content')[0].style.fontSize = '34px';
+  document.getElementsByClassName('footer__wrapper')[0].style.fontSize = '10px';
 }
-
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
-// (".i18n").i18n();
-// setupCounter(document.querySelector('#counter'))
-// console.log(i18next.t('GetUnlimitedAccess'))

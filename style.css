@@ -5,6 +5,7 @@ html {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
   box-sizing: border-box;
 }
+
 p, h1, h2, h3, body {
 margin: 0;
 padding: 0;
@@ -33,6 +34,7 @@ a, a:active, a:hover {
 
 body {
   background-image: url(public/bg.png);
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -103,6 +105,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: end;
+  font-weight: 900;
 }
 
 .advertisement__title-content {
@@ -239,7 +242,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: end;
   font-size: 12.5px;
   font-family: 'SF Pro Display', sans-serif;
   color: gray;
@@ -278,10 +281,16 @@ header {
   }
 }
 
-@media (max-width: 415px) and (min-width: 414px) {
+
+@media (max-width: 376px) and (min-width: 375px) {
 
   body {
-    background-size: 414px;
+    background-size: 375px;
+    width: 375px;
+  }
+
+  header {
+    height: 20px;
   }
 
   .bars {
@@ -340,16 +349,137 @@ header {
   }
 
   .advertisement {
-    top: 32px;
-    width: 342px;
+    top: 13px;
+    width: 327px;
     }
 
   .advertisement__title {
-    margin-top: 69px;
+    height: 158px;
   }
 
   .advertisement__cards {
-    margin: 40px auto 40.4px;
+    margin: 36px auto 40.4px;
+    gap: 8px;
+  }
+
+  .advertisement__selectors-wrap {
+    grid-template-rows: repeat(3, 56px);
+  }
+
+  .advertisement__selector {
+    grid-template-columns: 199px 126px;
+  }
+
+  .advertisement__button {
+    margin-top: 0;
+  }
+
+  .footer__wrapper {
+    margin: 43px auto 10px;
+  }
+
+  .footer__home-indicator {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 415px) and (min-width: 414px) {
+
+  body {
+    background-size: 414px;
+    width: 414px;
+  }
+
+  header {
+    height: 20px;
+  }
+
+  .bars {
+  grid-template-columns: 1fr 1fr 66px;
+  gap: 4px;
+  grid-template-areas: 'signals time bluetooth battery';
+  }
+
+  .bars__signals-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 6px;
+  }
+
+  .bars__mobile-signal::after {
+    content: 'Sketch';
+    color: white;
+    font-size: 12px;
+  }
+
+  .bars__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 47px;
+  }
+
+  .bars__time-item {
+    font-size: 12px;
+  }
+
+  .bars__time::after {
+    content: 'AM';
+    color: white;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  .bars__battery {
+    padding-right: 5px;
+  }
+
+  .bars__bluetooth::before {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    content: url(./public/Bluetooth.png);
+    grid-area: bluetooth;
+  }
+
+  .bars__battery::before {
+    content: '100%';
+    color: white;
+    font-size: 12px;
+    padding-right: 9px;
+  }
+
+  .advertisement {
+    top: 17px;
+    width: 363px;
+    }
+
+    .advertisement__selectors-wrap {
+      grid-template-rows: repeat(3, 56px);
+    }
+
+  .advertisement__title {
+    height: 164px;
+  }
+
+  .advertisement__cards {
+    margin: 27px auto 40.4px;
+    gap: 25px;
+  }
+
+  .advertisement__button {
+    margin-top: 0;
+  }
+
+  .footer__wrapper {
+    margin: 45px auto 10px;
+  }
+
+  .footer__home-indicator {
+    display: none;
   }
 
 }
