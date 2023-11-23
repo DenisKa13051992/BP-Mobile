@@ -21,6 +21,7 @@ pushLinks(createTagElement(linksContent, 'p'));
 pushContinue(createTagElement(buttonContinue, 'button'));
 pushBestOffer(createTagElement(bestOffer, 'p'));
 if (window.location.pathname === '/ru') { changeToRussianLanguage(); }
+choosingAdv();
 
 function createPushTitle () {
   const getUnlimitedAccess = document.createElement('h1');
@@ -77,4 +78,20 @@ function changeToRussianLanguage () {
   for (const i of [...advSelector]) { i.style.fontSize = '14px'; }
   document.getElementsByClassName('advertisement__title-content')[0].style.fontSize = '34px';
   document.getElementsByClassName('footer__wrapper')[0].style.fontSize = '10px';
+}
+
+function choosingAdv () {
+  const bestOfferContainer = document.getElementsByClassName('advertisement__selectors-wrap')[0];
+  const yearly = document.getElementsByClassName('advertisement__selector-yearly')[0];
+  const weekly = document.getElementsByClassName('advertisement__selector-weekly')[0];
+  const continueButton = document.getElementsByClassName('advertisement__button-name')[0];
+  const choosingColor = 'gray';
+  bestOfferContainer.onclick = (event) => {
+    const target = event.target;
+    if (target.closest('.advertisement__selector-yearly')) { yearly.style.borderColor = choosingColor; weekly.style.borderColor = 'white'; }
+    if (target.closest('.advertisement__selector-weekly')) { weekly.style.borderColor = choosingColor; yearly.style.borderColor = 'white'; }
+    if (target.closest('.advertisement__button')) {
+      if (yearly.style.borderColor === choosingColor) { window.location = 'https://apple.com/'; continueButton.style.borderColor = choosingColor; } else if (weekly.style.borderColor === choosingColor) { window.location = 'https://google.com/'; continueButton.style.backgroundColor = choosingColor; }
+    }
+  };
 }
